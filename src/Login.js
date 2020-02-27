@@ -109,6 +109,7 @@ handleChange(e) {
      else if(this.state.sampleText=='1')
       {
         window.stop();
+        this.state.sampleText='0';
        alert("invalid credentials");
     
      }
