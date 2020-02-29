@@ -1,6 +1,6 @@
 import React , { Component} from 'react';
 import Comp1 from './Comp1';
-import fire from './config/Fire';
+
 
 class Login extends Component {
   
@@ -10,8 +10,6 @@ class Login extends Component {
       super(props);
       this.state = {sampleText: '0'};
       this.state = {ok: '0'};
-      this.state = { username: 'WELCOME' };
-      this.login = this.login.bind(this);
       this.handleChange = this.handleChange.bind(this);
       this.state = {
         email: '',
@@ -52,16 +50,8 @@ handleChange(e) {
   this.setState({ [e.target.name]: e.target.value });
 }
 
-    login(e) {
-      e.preventDefault();
-      fire.auth().signInWithEmailAndPassword(this.state.username, this.state.password).then((u)=>{
-      }).catch((error) => {
-          console.log(error);
-        });
-        
-    } 
   render(){
-    var k=0;
+
     const body1={
         backgroundColor:"black",
         height:"100%",
@@ -108,7 +98,7 @@ handleChange(e) {
      )
      else if(this.state.sampleText=='1')
       {
-        window.stop();
+        window.history.back();
         this.state.sampleText='0';
        alert("invalid credentials");
     
@@ -119,7 +109,7 @@ handleChange(e) {
             <h1 style={wel}>WELCOME TO LOGIN PAGE</h1>
             <br/><br/><br/><br/><br/><br/>
             <br/><br/><br/>
-            <form  method="post">
+            <form method="post">
             <div style={s1}>
             <label style={t1}>
                 Name:
