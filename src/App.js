@@ -1,6 +1,6 @@
-import React , { Component} from 'react';
-import Login  from './Login.js';
-function App(){
+import React, { Component } from "react";
+import Login from "./Login.js";
+function App() {
   /*  
      constructor() {
     super();
@@ -27,17 +27,15 @@ function App(){
     });
   }
   */
-    const body1={
-        backgroundColor:"black",
-        height:"100%",
-        width:"100%",
-    }
-        return (
-            
-            <div style={body1} className="app-content">
-            <Login/>
-            </div>
-        );
-          
-    }
+  const body1 = {
+    backgroundColor: "black",
+    height: "100%",
+    width: "100%",
+  };
+  return (
+    <div style={body1} className="app-content">
+      <Login />
+    </div>
+  );
+}
 export default App;
